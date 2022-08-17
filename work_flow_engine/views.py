@@ -6,6 +6,11 @@ def sign_up(request):
 
 
 def userpage(request):
+    email = request.POST.get('email')
+    password = request.POST.get('password')
+
+    print(email)
+    print(password)
     return render(request, 'userpage.html')
 
 
@@ -25,10 +30,6 @@ def autoresponder(request):
 
 def ecommerce(request):
     return render(request, 'ec_mktn.html')
-
-
-def marketing(request):
-    return render(request, 'marketing.html')
 
 
 def blank(request):
